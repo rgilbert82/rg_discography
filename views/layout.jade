@@ -1,0 +1,74 @@
+include /_mixins
+
+doctype html
+meta(name='viewport', content='width=device-width, initial-scale=1')
+html
+  head
+    title= "Music | Ryan Gilbert"
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    +stylesheet_link_tag("application")
+    +javascript_include_tag("vendor/all")
+    +javascript_include_tag("handlebars_templates")
+  body
+    #music_player_wrapper
+      #canvas_wrapper
+        h1= "RG Music Collection"
+        canvas(id="visualizer" width="920" height="100")
+      #player
+        dl
+          dt
+            h3="Now Playing:"
+          dd
+            h2(id="current_track_title")
+        audio
+
+    main
+      #content
+        block content
+      #sidebar
+        h2(id="sidebar_artist_name")= "Ryan Gilbert"
+        h3= "Los Angeles, California"
+        input(type="checkbox" id="follow_checkbox" name="follow_checkbox" hidden)
+        label(id="follow_button" for="follow_checkbox")= "Follow"
+        #discography
+          a(href="" class="back_to_home")
+            h2(id="discography_head")= "discography"
+          ul
+        h3= "contact/ help"
+        a(href="mailto:ry.gil.online@gmail.com" class="help_link")= "Contact Ryan Gilbert"
+        a(href="" class="help_link back_to_home")= "Streaming and Download help"
+
+    canvas(id="background_design" width="1500" height="1100")
+    footer
+      dl
+        dt
+          #rg_camp
+            img(src="/images/rg_logo.jpg")
+            h2= "RG Music"
+        dd
+          ul
+            li
+              a(href="#")="log in"
+            li
+              a(href="#")="terms of use"
+            li
+              a(href="#")="privacy"
+            li
+              a(href="#")="copyright policy"
+            li
+              a(href="#")="status"
+            li
+              a(href="#")="switch to mobile view"
+            li= "language: "
+              a(href="#")="English"
+
+
+    +javascript_include_tag("canvas/visualizer", "canvas/background_image")
+    +javascript_include_tag("application")
+    +javascript_include_tag("models/album", "models/track")
+    +javascript_include_tag("collections/albums", "collections/tracks")
+    +javascript_include_tag("views/album", "views/sidebar_album", "views/index", "views/tracks", "views/track", "views/error")
+    script(type="text/javascript").
+      App.albums = new Albums(!{JSON.stringify(albums)});
+    +javascript_include_tag("router")
+    block scripts

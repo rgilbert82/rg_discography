@@ -1,0 +1,42 @@
+<div class="col1">
+  <h1>{{title}}</h1>
+  <h2>by <a href="" class="back_to_home"><strong>{{artist}}</strong></a></h2>
+
+  <div class="download">
+    <h3><a href="{{downloadURL}}" target="_blank">Digital Album</a></h3>
+    <h2><a href="{{downloadURL}}" target="_blank">Free Download</a></h2>
+    {{#if videoLink}}<h2><a href="{{videoLink}}" id="videoLink" target="_blank">Video Link!!!</a></h2>{{/if}}
+  </div>
+
+  <ul id="tracks_list"></ul>
+
+  <ul id="album_info">
+    <li><h3>released {{date}}</h3></li>
+    <li><h3>tags: {{#each tags}}<a href={{this.link}} target="_blank">{{this.genre}}</a> {{/each}}</h3></li>
+    <li><h3><strong>&copy;</strong> All Rights Reserved</h3></li>
+  </ul>
+</div><!--
+
+--><div class="col2">
+  <img src="{{cover}}" class="featured_album_cover"/>
+
+  <label for="share">
+    <img src="/images/share.png"></img>
+    <h2>Share</h2>
+  </label>
+  <input type="checkbox" name="share" id="share" hidden/>
+  <div id="share_dropdown">
+    <div id="share_arrow_border"></div>
+    <div id="share_arrow"></div>
+    <ul id="social_media_logos">
+      <li><a href="https://www.facebook.com/" target="_blank"><img src="/images/icon_facebook.png"></img><a/></li>
+      <li><a href="https://twitter.com/" target="_blank"><img src="/images/icon_twitter.png"></img></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><img src="/images/icon_instagram.png"></img></a></li>
+      <li><a href="https://www.google.com/" target="_blank"><img src="/images/icon_google.png"></img></a></li>
+    </ul>
+    <label>
+      Email
+      <input type="text" value="{{url}}" />
+    </label>
+  </div>
+</div>

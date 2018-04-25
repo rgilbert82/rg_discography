@@ -1,0 +1,451 @@
+@import "whitespace-reset.css"
+@import "mixins"
+
+*
+  box-sizing: border-box
+
+a
+  color: currentColor
+  text-decoration: none
+  &:hover
+    color: colors.font1
+
+html
+  overflow-x: hidden
+
+body
+  position: relative
+  font: normal 12px "Helvetica Neue", Helvetica, Arial, sans-serif
+  color: colors.font2
+  background-color: colors.primary
+  overflow-x: hidden
+  z-index: 1
+
+#music_player_wrapper, main
+  width: 1000px
+  margin 0 auto;
+
+#music_player_wrapper
+  position: relative
+  z-index: 5
+  padding: 20px 40px 0 40px
+  background-color: colors.primary
+  #canvas_wrapper
+    position: relative
+    h1
+      position: absolute
+      width: 100%
+      text-align: center
+      top: 30px
+      font-size: 40px
+      font-weight: 100
+      letter-spacing: 2.5px
+      color: colors.font1
+  #player
+    width: 500px
+    margin: 0 auto
+    dl
+      width: 100%
+      padding-bottom: 20px
+      text-align: center
+      dt, dd
+        padding: 0 10px
+        display: inline-block
+        letter-spacing: 1.3px
+      dt
+        width: 40%
+        font-size: 13px
+        text-align: right
+      dd
+        width: 60%
+        font-size: 15px
+        text-align: left
+        color: colors.font3
+    audio
+      width: 100%
+      margin: 0 auto
+      background-color: colors.primary
+      border: 2px solid colors.font2
+
+main
+  background-color: colors.primary
+  h2
+    font-weight: bold
+    font-size: 14px
+  h3
+    font-weight: normal
+
+#content
+  display: inline-block
+  width: 80%
+  vertical-align: top
+
+  #index_view
+    position: relative
+    z-index: 5
+    ul
+      padding: 20px
+      li
+        display: inline-block
+        width: 50%
+        padding: 20px
+        a
+          img
+            width: 100%
+            border: 1px solid colors.font2
+        &:hover
+          img
+            border-color: colors.font1
+
+  #album_wrapper
+    padding-top: 40px
+    .col1, .col2
+      display: inline-block
+      width: 50%
+      position: relative
+      vertical-align: top
+      z-index: 5
+
+    .col1
+      a
+        &:hover
+          text-decoration: underline
+      h1
+        padding-bottom: 5px
+        font-size: 28px
+        font-weight: 100
+        letter-spacing: 1.5px
+        color: colors.font3
+        + h2
+          font-weight: normal
+          strong
+            font-weight: bold
+            letter-spacing: 1.3px
+
+      .download
+        padding: 25px 0
+        h3
+          font-size: 14px
+        h2
+          font-size: 16px
+        #videoLink
+          display: inline-block
+          padding-top: 10px
+          color: colors.tronGreen
+
+      #tracks_list
+        list-style-type: decimal
+        padding-left: 35px
+        li
+          position: relative
+          color: colors.font3
+          padding: 5px 0
+          dt, dd
+            display: inline-block
+            padding: 0 10px 0 5px
+          dt
+            color: colors.font2
+          div
+            position: absolute
+            display: inline-block
+            top: 4px
+            left: -35px
+            &:hover
+              cursor: pointer
+          .play_icon, .play_icon_current
+            width: 0
+            height: 0
+            border-top: 7px solid transparent
+            border-bottom: 7px solid transparent
+          .play_icon
+            border-left: 10px solid colors.font2
+          .play_icon_current
+            border-left: 10px solid colors.tronGreen
+          .pause_icon
+            display: inline-block
+            width: 12px
+            height: 14px
+            border-right: 4px solid colors.tronGreen
+            border-left: 4px solid colors.tronGreen
+
+      #album_info
+        padding-top: 10px
+        li
+          padding: 10px 0
+          h3
+            strong
+              font-weight: normal
+              color: colors.font3
+
+    .col2
+      .featured_album_cover
+        display: block
+        margin-bottom: 15px
+        border: 1px solid colors.font2
+      label
+        img, h2
+          display: inline-block
+          &:hover
+            cursor: pointer
+            text-decoration: underline
+        img
+          padding-right: 5px
+        h2
+          letter-spacing: 1.3px
+      #share_dropdown
+        display: none
+        position: relative
+        padding: 20px
+        margin-top: 20px
+        margin-right: 48px
+        background-color: colors.font3
+        border: 2px solid colors.font2
+        color: colors.primary
+        z-index: 5
+        #share_arrow, #share_arrow_border
+          position: absolute
+          left: 20px
+          width: 0
+          height: 0
+          border-left: 15px solid transparent
+          border-right: 15px solid transparent
+        #share_arrow
+          top: -15px
+          border-bottom: 15px solid colors.font3
+          z-index: 6
+        #share_arrow_border
+          top: -17px
+          border-bottom: 15px solid colors.font2
+        #social_media_logos
+          li
+            display: inline-block
+            width: 25%
+            text-align: center
+            padding-bottom: 20px
+            margin-bottom: 20px
+            border-bottom: 1px solid colors.font2
+        label
+          font-size: 13px
+          font-weight: bold
+        input[type="text"]
+          width: 85%
+          padding: 5px
+          border: 1px solid colors.font2
+          margin-left: 5px
+          font: normal 12px "Helvetica Neue", Helvetica, Arial, sans-serif
+      #share:checked
+        + #share_dropdown
+          display: block
+
+
+#sidebar
+  display: inline-block
+  width: 20%
+  vertical-align: top
+  padding: 40px 40px 40px 0
+  position: relative
+  z-index: 5
+  h2
+    color: colors.font3
+    letter-spacing: 1.3px
+  #sidebar_artist_name
+    padding-bottom: 5px
+  #follow_button
+    display: block
+    padding: 5px
+    margin: 15px 20px 25px 0
+    border: 1px solid colors.font2
+    border-radius: 3px
+    background-color: colors.font3
+    text-align: center
+    font-size: 13px
+    font-weight: bold
+    color: colors.primary
+    &:hover
+      cursor: pointer
+      text-decoration: underline
+  #follow_checkbox:checked
+    + #follow_button
+      background-color: colors.tronGreen
+      content: "Following"
+  #discography
+    #discography_head
+      padding: 0 0 20px 0
+      &:hover
+        text-decoration: underline
+    ul
+      width: 100%
+      padding-bottom: 20px
+      li
+        padding-bottom: 15px
+        a
+          img
+            width: 100%
+            border: 1px solid colors.font2
+        &:hover
+          h2
+            color: colors.font1
+          img
+            border-color: colors.font1
+    + h3
+      font-size: 14px
+      font-weight: bold
+      letter-spacing: 1.3px
+  a.help_link
+    display: block
+    padding-top: 10px
+    &:hover
+      text-decoration: underline
+
+#background_design
+  position: absolute
+  bottom: 50px
+  z-index: 2
+
+footer
+  clear: both
+  background-color: colors.footer
+  border-top: 1px solid colors.font2
+  color: colors.font3
+  dl
+    width: 1000px
+    margin: 0 auto
+    padding: 15px 40px
+    overflow: hidden
+    dt
+      display: inline-block
+      float: left
+      img
+        display: inline-block
+        padding-right: 10px
+      h2
+        display: inline-block
+        font-size: 14px
+        font-weight: bold
+        letter-spacing: 1.3px
+    dd
+      display: inline-block
+      float: right
+      ul
+        li
+          display: inline-block
+          padding-left: 15px
+          a
+            &:hover
+              text-decoration: underline
+
+#error_message
+  margin: 100px 0 250px 0
+  text-align: center
+  color: colors.tronGreen
+  h1
+    font-size: 40px
+  h2
+    font-size: 30px
+
+@media(max-device-width: 1200px)
+  #background_design
+    width: 1024px
+  #content
+    #album_wrapper
+      .col1, .col2
+        padding-left: 20px
+        width: 100%
+      .col2
+        .featured_album_cover
+          width: 70%
+
+
+@media(max-width:1000px)
+  main
+    padding-bottom: 25px
+  main, #music_player_wrapper, footer dl
+    width: 800px
+  #music_player_wrapper
+    #visualizer
+      width: 750px
+  #album_wrapper
+    .col2
+      .featured_album_cover
+        width: 90%
+
+@media(max-width:800px)
+  main, #music_player_wrapper, footer dl
+    width: 600px
+  #background_design, footer
+    width: 768px
+  #music_player_wrapper
+    #canvas_wrapper
+      h1
+        top: 15px
+    #visualizer
+      width: 550px
+  footer dl dd
+    display: none
+  #content
+    #album_wrapper
+      .col1, .col2
+        padding-left: 20px
+        width: 100%
+      .col2
+        .featured_album_cover
+          width: 70%
+
+@media (max-width:600px)
+  main, #music_player_wrapper, footer, footer dl, #background_design
+    width: 480px
+  #music_player_wrapper
+    #canvas_wrapper
+      h1
+        top: 0
+    #player, #visualizer
+      width: 380px
+      dl
+        dt, dd
+          #current_track_title
+            font-size: 12px
+  #content, #sidebar
+    width: 100%
+  #content
+    #album_wrapper
+      .col2
+        padding-left: 0
+        text-align: center
+        .featured_album_cover, #share_dropdown
+          margin: 10px auto
+        #share_dropdown
+          width: 70%
+  #sidebar
+    padding: 40px
+    text-align: center
+    #follow_button
+      margin: 15px 25px
+    #discography
+      ul
+        display: none
+  footer
+    width: 100vw
+
+@media(max-width:480px)
+  main, #music_player_wrapper, footer dl
+    width: 400px
+  footer
+    width: 480px
+  #music_player_wrapper
+    #canvas_wrapper
+      h1
+        font-size: 24px
+    #player, #visualizer
+      width: 300px
+
+@media(max-width:360px)
+  main, #music_player_wrapper, footer dl
+    width: 320px
+  #music_player_wrapper #player
+    width: 250px
+  #music_player_wrapper #canvas_wrapper h1
+    font-size: 20px
+  #content #index_view
+    ul
+      li
+        width: 100%

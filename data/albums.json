@@ -1,0 +1,45 @@
+[
+  {
+    "artist": "Ryan Gilbert",
+    "title": "The Narcissist",
+    "url": "http://rgilbert.bandcamp.com/album/the-narcissist",
+    "date": "September 2, 2016",
+    "cover": "/images/narcissist.jpg",
+    "downloadURL": "https://drive.google.com/uc?export=download&id=0B5BJeuGrattLbjBoNDl3WGoxR2c",
+    "tags": [{"genre": "electronic", "link": "https://en.wikipedia.org/wiki/Electronic_music"}, {"genre": "acid", "link":"https://en.wikipedia.org/wiki/Acid_techno"}, {"genre": "chiptune", "link": "https://en.wikipedia.org/wiki/Chiptune"}, {"genre": "synth", "link": "https://en.wikipedia.org/wiki/Synthesizer"}]
+    }, {
+    "artist": "Ryan Gilbert",
+    "title": "Odyssey",
+    "url": "http://rgilbert.bandcamp.com/album/odyssey",
+    "date": "April 1, 2016",
+    "cover": "/images/odyssey.jpg",
+    "downloadURL": "https://drive.google.com/uc?export=download&id=0B5BJeuGrattLeFBXc19KbDlsaFk",
+    "tags": [{"genre": "electronic", "link": "https://en.wikipedia.org/wiki/Electronic_music"}, {"genre": "analog", "link": "https://en.wikipedia.org/wiki/Analog_synthesizer"}, {"genre": "synth", "link": "https://en.wikipedia.org/wiki/Synthesizer"}, {"genre": "pysychedelic", "link": "https://en.wikipedia.org/wiki/Psychedelic_music"},
+      {"genre": "ambient", "link": "https://en.wikipedia.org/wiki/Ambient_music"}, {"genre": "film score", "link": "https://en.wikipedia.org/wiki/Film_score"}],
+    "videoLink": "https://vimeo.com/161142522"
+    }, {
+    "artist": "Ryan Gilbert",
+    "title": "Noir",
+    "url": "http://rgilbert.bandcamp.com/album/noir",
+    "date": "December 31, 2015",
+    "cover": "/images/noir.jpg",
+    "downloadURL": "https://drive.google.com/uc?export=download&id=0B5BJeuGrattLZzFUODlUUDI2Z2M",
+    "tags": [{"genre": "electronic", "link": "https://en.wikipedia.org/wiki/Electronic_music"}, {"genre": "instrumental hip-hop", "link": "https://en.wikipedia.org/wiki/Hip_hop_production#Instrumental_hip_hop"}, {"genre": "noir", "link": "https://en.wikipedia.org/wiki/Film_noir"}, {"genre": "experimental", "link": "https://en.wikipedia.org/wiki/Experimental_music"}]
+  }, {
+    "artist": "Ryan Gilbert",
+    "title": "Rooks",
+    "url": "http://rgilbert.bandcamp.com/album/rooks",
+    "date": "October 1, 2015",
+    "cover": "/images/rooks.jpg",
+    "downloadURL": "https://drive.google.com/uc?export=download&id=0B5BJeuGrattLRUdfaW1zSFBGQ2c",
+    "tags": [{"genre": "electronic", "link": "https://en.wikipedia.org/wiki/Electronic_music"}, {"genre": "acid", "link":"https://en.wikipedia.org/wiki/Acid_techno"}, {"genre": "cyberpunk", "link": "https://en.wikipedia.org/wiki/Cyberpunk"}, {"genre": "synth", "link": "https://en.wikipedia.org/wiki/Synthesizer"}]
+  }, {
+    "artist": "Ryan Gilbert",
+    "title": "Invasion!",
+    "url": "http://rgilbert.bandcamp.com/album/invasion",
+    "date": "December 1, 2013",
+    "cover": "/images/invasion.jpg",
+    "downloadURL": "https://drive.google.com/uc?export=download&id=0B5BJeuGrattLeHNBUmJXTGNHVUE",
+    "tags": [{"genre": "8-bit", "link": "https://en.wikipedia.org/wiki/8-bit"}, {"genre": "NES", "link": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System"}, {"genre": "chiptune", "link": "https://en.wikipedia.org/wiki/Chiptune"}]
+  }
+]
