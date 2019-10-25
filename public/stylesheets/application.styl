@@ -3,6 +3,7 @@
 
 *
   box-sizing: border-box
+  max-width: 100%
 
 a
   color: currentColor
@@ -23,7 +24,8 @@ body
 
 #music_player_wrapper, main
   width: 1000px
-  margin 0 auto;
+  max-width: 100%
+  margin 0 auto
 
 #music_player_wrapper
   position: relative
@@ -65,7 +67,6 @@ body
       width: 100%
       margin: 0 auto
       background-color: colors.primary
-      border: 2px solid colors.font2
 
 main
   background-color: colors.primary
@@ -99,6 +100,7 @@ main
 
   #album_wrapper
     padding-top: 40px
+    padding-left: 40px
     .col1, .col2
       display: inline-block
       width: 50%
@@ -307,6 +309,7 @@ footer
   background-color: colors.footer
   border-top: 1px solid colors.font2
   color: colors.font3
+  max-width: 100%
   dl
     width: 1000px
     margin: 0 auto
@@ -380,6 +383,10 @@ footer
         top: 15px
     #visualizer
       width: 550px
+  footer dl
+    text-align: center
+  footer dl dt
+    float: none
   footer dl dd
     display: none
   #content
@@ -408,6 +415,13 @@ footer
     width: 100%
   #content
     #album_wrapper
+      padding-left: 0
+      .col1
+        text-align: center
+        padding-left: 0
+        .col1-inner
+          text-align: left
+          display: inline-block
       .col2
         padding-left: 0
         text-align: center

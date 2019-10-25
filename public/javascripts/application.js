@@ -73,8 +73,11 @@ var App = {
   },
   renderToCanvases: function() {
     renderBackgroundImage();
-    if($(window).width() > 740) {
+  },
+  startVisualizer: function() {
+    if($(window).width() > 740 && !this.visualizerOn) {
       visualizer();
+      this.visualizerOn = true;
     }
   },
   hideSidebarAlbums: function() {
@@ -176,6 +179,7 @@ var App = {
     "\"]").removeClass().addClass(icon);
   },
   setCurrentlyPlayingIcon: function() {
+    this.startVisualizer();
     this.resetAllIcons();
     this.resetCurrentTrackIcon("pause_icon");
   },

@@ -51,7 +51,7 @@ this["JST"]["tracks"] = Handlebars.template({"1":function(container,depth0,helpe
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<div class=\"col1\"><h1>"
+  return "<div class=\"col1\"><div class=\"col1-inner\"><h1>"
     + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
     + "</h1><h2>by <a href=\"\" class=\"back_to_home\"><strong>"
     + alias4(((helper = (helper = helpers.artist || (depth0 != null ? depth0.artist : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"artist","hash":{},"data":data}) : helper)))
@@ -65,7 +65,7 @@ this["JST"]["tracks"] = Handlebars.template({"1":function(container,depth0,helpe
     + alias4(((helper = (helper = helpers.date || (depth0 != null ? depth0.date : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"date","hash":{},"data":data}) : helper)))
     + "</h3></li><li><h3>tags: "
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.tags : depth0),{"name":"each","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "</h3></li><li><h3><strong>&copy;</strong> All Rights Reserved</h3></li></ul></div><!----><div class=\"col2\"><img src=\""
+    + "</h3></li><li><h3><strong>&copy;</strong> All Rights Reserved</h3></li></ul></div></div><!----><div class=\"col2\"><img src=\""
     + alias4(((helper = (helper = helpers.cover || (depth0 != null ? depth0.cover : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cover","hash":{},"data":data}) : helper)))
     + "\" class=\"featured_album_cover\"/><label for=\"share\"><img src=\"/images/share.png\"></img><h2>Share</h2></label><input type=\"checkbox\" name=\"share\" id=\"share\" hidden/><div id=\"share_dropdown\"><div id=\"share_arrow_border\"></div><div id=\"share_arrow\"></div><ul id=\"social_media_logos\"><li><a href=\"https://www.facebook.com/\" target=\"_blank\"><img src=\"/images/icon_facebook.png\"></img><a/></li><li><a href=\"https://twitter.com/\" target=\"_blank\"><img src=\"/images/icon_twitter.png\"></img></a></li><li><a href=\"https://www.instagram.com/\" target=\"_blank\"><img src=\"/images/icon_instagram.png\"></img></a></li><li><a href=\"https://www.google.com/\" target=\"_blank\"><img src=\"/images/icon_google.png\"></img></a></li></ul><label>Email<input type=\"text\" value=\""
     + alias4(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"url","hash":{},"data":data}) : helper)))

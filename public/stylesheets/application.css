@@ -1,6 +1,7 @@
 @import "whitespace-reset.css";
 * {
   box-sizing: border-box;
+  max-width: 100%;
 }
 a {
   color: currentColor;
@@ -23,6 +24,7 @@ body {
 #music_player_wrapper,
 main {
   width: 1000px;
+  max-width: 100%;
   margin: 0 auto;
 }
 #music_player_wrapper {
@@ -74,7 +76,6 @@ main {
   width: 100%;
   margin: 0 auto;
   background-color: #181818;
-  border: 2px solid #747474;
 }
 main {
   background-color: #181818;
@@ -112,6 +113,7 @@ main h3 {
 }
 #content #album_wrapper {
   padding-top: 40px;
+  padding-left: 40px;
 }
 #content #album_wrapper .col1,
 #content #album_wrapper .col2 {
@@ -359,6 +361,7 @@ footer {
   background-color: #252525;
   border-top: 1px solid #747474;
   color: #bbb7b7;
+  max-width: 100%;
 }
 footer dl {
   width: 1000px;
@@ -447,6 +450,12 @@ footer dl dd ul li a:hover {
   #music_player_wrapper #visualizer {
     width: 550px;
   }
+  footer dl {
+    text-align: center;
+  }
+  footer dl dt {
+    float: none;
+  }
   footer dl dd {
     display: none;
   }
@@ -483,6 +492,17 @@ footer dl dd ul li a:hover {
   #content,
   #sidebar {
     width: 100%;
+  }
+  #content #album_wrapper {
+    padding-left: 0;
+  }
+  #content #album_wrapper .col1 {
+    text-align: center;
+    padding-left: 0;
+  }
+  #content #album_wrapper .col1 .col1-inner {
+    text-align: left;
+    display: inline-block;
   }
   #content #album_wrapper .col2 {
     padding-left: 0;
